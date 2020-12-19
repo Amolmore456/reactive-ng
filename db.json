@@ -1,0 +1,61 @@
+{
+  "pizzas":[
+    {
+      "id":1,
+      "name":"Farm Pizza",
+      "toppings":[
+        {
+          "id":1,
+          "name":"Capsicum"
+        },
+        {
+          "id":2,
+          "name":"Cheese"
+        }
+      ]
+    },
+    {
+      "id":2,
+      "name":"Green Pizza",
+      "toppings":[
+        {
+          "id":1,
+          "name":"Capsicum"
+        },
+        {
+          "id":2,
+          "name":"Tomato"
+        },
+        {
+          "id":3,
+          "name":"Cheese"
+        }
+        
+      ]
+    },
+    {
+      "id":3,
+      "name":"Just Pizza",
+      "toppings":[
+        {
+          "id":1,
+          "name":"Capsicum"
+        },
+        {
+          "id":2,
+          "name":"Cheese"
+        }
+      ]
+    }
+
+  ],
+  "cardDetails" :[
+    {
+      "cardNumber":"4444-4444-4444-4444",
+      "cardHolderName":"John Doe",
+      "expirationDate":"03/22",
+      "cvv":"123",
+      "amount":100
+    }
+  ]
+}

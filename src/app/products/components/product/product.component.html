@@ -1,0 +1,39 @@
+<p>product works!</p>
+<div *ngFor="let pizza of (pizzas$ | async)">
+    {{pizza.id}}  {{pizza.name}} 
+    <div *ngFor="let topping of pizza.toppings ">
+        {{topping.id}} {{topping.name}}
+    </div>
+</div>
+
+
+
+
+<mat-card>
+    <mat-card-title>Card Details</mat-card-title>
+    <form [formGroup]="cardDetails" class="example-form" (ngSubmit)="onSubmit(cardDetails)">
+        <mat-form-field class="example-full-width">
+          <mat-label>Card Number</mat-label>
+          <input formControlName="cardNumber" type="text" matInput placeholder="Ex. 4298-XXXX-XXXX-1902">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Card Number</mat-label>
+        <input formControlName="cardHolderName" type="text" matInput placeholder="Ex. John Doe">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Expiration Date</mat-label>
+            <input formControlName="experationDate" type="text" matInput placeholder="MM/DD">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>CVV</mat-label>
+            <input formControlName="cvv" type="text" matInput placeholder="CVV">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input formControlName="amount" type="text" matInput placeholder="Enter amount">
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!cardDetails.valid">Save</button>
+    </form>
+</mat-card>
